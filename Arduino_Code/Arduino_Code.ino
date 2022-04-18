@@ -33,70 +33,37 @@ void loop() {
   int roll = (atan2(normAccel.YAxis, normAccel.ZAxis) * 180.0) / M_PI;
 
   // Output
-  Serial.print(" Pitch = ");
-  Serial.print(pitch);
   Serial.print(" Roll = ");
   Serial.print(roll);
 
   Serial.println();
 
-
-  // Set the spinning direction counterclockwise:
-  digitalWrite(dirPin, LOW);
-
-  //Spin the stepper motor 5 revolutions fast:
-  for (int i = 0; i < 3 * stepsPerRevolution; i++) {
-    // These four lines result in 1 step:
-    digitalWrite(stepPin, HIGH);
-    delayMicroseconds(1000 - (i * 2.5));
-    digitalWrite(stepPin, LOW);
-    delayMicroseconds(1000 - (i * 2.5));
-  }
-  //Spin the stepper motor 5 revolutions fast:
-  for (int i = 0; i < 3 * stepsPerRevolution; i++) {
-    // These four lines result in 1 step:
-    digitalWrite(stepPin, HIGH);
-    delayMicroseconds(250);
-    digitalWrite(stepPin, LOW);
-    delayMicroseconds(250);
-  }
-  //Spin the stepper motor 5 revolutions fast:
-  for (int i = 0; i < 3 * stepsPerRevolution; i++) {
-    // These four lines result in 1 step:
-    digitalWrite(stepPin, HIGH);
-    delayMicroseconds(250 + (i * 2.5));
-    digitalWrite(stepPin, LOW);
-    delayMicroseconds(250 + (i * 2.5));
-  }
-
-  delay(1000);
-
-  // Set the spinning direction counterclockwise:
-  digitalWrite(dirPin, HIGH);
-
-  //Spin the stepper motor 5 revolutions fast:
-  for (int i = 0; i < 3 * stepsPerRevolution; i++) {
-    // These four lines result in 1 step:
-    digitalWrite(stepPin, HIGH);
-    delayMicroseconds(1000 - (i * 2.5));
-    digitalWrite(stepPin, LOW);
-    delayMicroseconds(1000 - (i * 2.5));
-  }
-  //Spin the stepper motor 5 revolutions fast:
-  for (int i = 0; i < 3 * stepsPerRevolution; i++) {
-    // These four lines result in 1 step:
-    digitalWrite(stepPin, HIGH);
-    delayMicroseconds(250);
-    digitalWrite(stepPin, LOW);
-    delayMicroseconds(250);
-  }
-  //Spin the stepper motor 5 revolutions fast:
-  for (int i = 0; i < 3 * stepsPerRevolution; i++) {
-    // These four lines result in 1 step:
-    digitalWrite(stepPin, HIGH);
-    delayMicroseconds(250 + (i * 2.5));
-    digitalWrite(stepPin, LOW);
-    delayMicroseconds(250 + (i * 2.5));
-  }
-  delay(1000);
+//
+//  // Set the spinning direction counterclockwise:
+//  digitalWrite(dirPin, LOW);
+//
+//  //Spin the stepper motor 5 revolutions fast:
+//  for (int i = 0; i < 3 * stepsPerRevolution; i++) {
+//    // These four lines result in 1 step:
+//    digitalWrite(stepPin, HIGH);
+//    delayMicroseconds(450);
+//    digitalWrite(stepPin, LOW);
+//    delayMicroseconds(450);
+//  }
+//
+//
+  delay(100);
+//
+//  // Set the spinning direction counterclockwise:
+//  digitalWrite(dirPin, HIGH);
+//
+//  for (int i = 0; i < 3 * stepsPerRevolution; i++) {
+//    // These four lines result in 1 step:
+//    digitalWrite(stepPin, HIGH);
+//    delayMicroseconds(450);
+//    digitalWrite(stepPin, LOW);
+//    delayMicroseconds(450);
+//  }
+//
+//  delay(1000);
 }
