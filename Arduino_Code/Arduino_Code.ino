@@ -29,7 +29,6 @@ void loop() {
   Vector normAccel = mpu.readNormalizeAccel();
 
   // Calculate Pitch & Roll
-  int pitch = -(atan2(normAccel.XAxis, sqrt(normAccel.YAxis * normAccel.YAxis + normAccel.ZAxis * normAccel.ZAxis)) * 180.0) / M_PI;
   int roll = (atan2(normAccel.YAxis, normAccel.ZAxis) * 180.0) / M_PI;
 
   // Output
@@ -38,32 +37,58 @@ void loop() {
 
   Serial.println();
 
-//
-//  // Set the spinning direction counterclockwise:
-//  digitalWrite(dirPin, LOW);
-//
-//  //Spin the stepper motor 5 revolutions fast:
-//  for (int i = 0; i < 3 * stepsPerRevolution; i++) {
-//    // These four lines result in 1 step:
-//    digitalWrite(stepPin, HIGH);
-//    delayMicroseconds(450);
-//    digitalWrite(stepPin, LOW);
-//    delayMicroseconds(450);
-//  }
-//
-//
+  //
+  //  // Set the spinning direction counterclockwise:
+  //  digitalWrite(dirPin, LOW);
+  //
+  //  //Spin the stepper motor 5 revolutions fast:
+  //  for (int i = 0; i < 3 * stepsPerRevolution; i++) {
+  //    // These four lines result in 1 step:
+  //    digitalWrite(stepPin, HIGH);
+  //    delayMicroseconds(450);
+  //    digitalWrite(stepPin, LOW);
+  //    delayMicroseconds(450);
+  //  }
+  //
+  //
   delay(100);
-//
-//  // Set the spinning direction counterclockwise:
-//  digitalWrite(dirPin, HIGH);
-//
-//  for (int i = 0; i < 3 * stepsPerRevolution; i++) {
-//    // These four lines result in 1 step:
-//    digitalWrite(stepPin, HIGH);
-//    delayMicroseconds(450);
-//    digitalWrite(stepPin, LOW);
-//    delayMicroseconds(450);
-//  }
-//
-//  delay(1000);
+  //
+  //  // Set the spinning direction counterclockwise:
+  //  digitalWrite(dirPin, HIGH);
+  //
+  //  for (int i = 0; i < 3 * stepsPerRevolution; i++) {
+  //    // These four lines result in 1 step:
+  //    digitalWrite(stepPin, HIGH);
+  //    delayMicroseconds(450);
+  //    digitalWrite(stepPin, LOW);
+  //    delayMicroseconds(450);
+  //  }
+  //
+  //  delay(1000);
+}
+
+void moveStepper(int roll) {
+  if (roll < 0) {
+    //something
+  }
+  if (roll > 0) {
+    //something
+  }
+  if (roll == 0) {
+    return;
+  }
+
+}
+
+int calculateP_Delay(int pitch) {
+  return 0;
+}
+int calculatePI_Delay(int pitch) {
+  return 0;
+}
+int calculatePD_Delay(int pitch) {
+  return 0;
+}
+int calculatePID_Delay(int pitch) {
+  return 0;
 }
