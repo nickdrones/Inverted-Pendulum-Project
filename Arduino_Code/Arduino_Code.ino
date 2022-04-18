@@ -45,7 +45,7 @@ void loop() {
   digitalWrite(dirPin, LOW);
 
   //Spin the stepper motor 5 revolutions fast:
-  for (int i = 0; i < 1 * stepsPerRevolution; i++) {
+  for (int i = 0; i < 3 * stepsPerRevolution; i++) {
     // These four lines result in 1 step:
     digitalWrite(stepPin, HIGH);
     delayMicroseconds(1000 - (i * 2.5));
@@ -56,17 +56,17 @@ void loop() {
   for (int i = 0; i < 3 * stepsPerRevolution; i++) {
     // These four lines result in 1 step:
     digitalWrite(stepPin, HIGH);
-    delayMicroseconds(500);
+    delayMicroseconds(250);
     digitalWrite(stepPin, LOW);
-    delayMicroseconds(500);
+    delayMicroseconds(250);
   }
   //Spin the stepper motor 5 revolutions fast:
-  for (int i = 0; i < 1 * stepsPerRevolution; i++) {
+  for (int i = 0; i < 3 * stepsPerRevolution; i++) {
     // These four lines result in 1 step:
     digitalWrite(stepPin, HIGH);
-    delayMicroseconds(500 + (i * 2.5));
+    delayMicroseconds(250 + (i * 2.5));
     digitalWrite(stepPin, LOW);
-    delayMicroseconds(500 + (i * 2.5));
+    delayMicroseconds(250 + (i * 2.5));
   }
 
   delay(1000);
@@ -75,7 +75,7 @@ void loop() {
   digitalWrite(dirPin, HIGH);
 
   //Spin the stepper motor 5 revolutions fast:
-  for (int i = 0; i < 1 * stepsPerRevolution; i++) {
+  for (int i = 0; i < 3 * stepsPerRevolution; i++) {
     // These four lines result in 1 step:
     digitalWrite(stepPin, HIGH);
     delayMicroseconds(1000 - (i * 2.5));
@@ -86,17 +86,17 @@ void loop() {
   for (int i = 0; i < 3 * stepsPerRevolution; i++) {
     // These four lines result in 1 step:
     digitalWrite(stepPin, HIGH);
-    delayMicroseconds(500);
+    delayMicroseconds(250);
     digitalWrite(stepPin, LOW);
-    delayMicroseconds(500);
+    delayMicroseconds(250);
   }
   //Spin the stepper motor 5 revolutions fast:
-  for (int i = 0; i < 1 * stepsPerRevolution; i++) {
+  for (int i = 0; i < 3 * stepsPerRevolution; i++) {
     // These four lines result in 1 step:
     digitalWrite(stepPin, HIGH);
-    delayMicroseconds(500 + (i * 2.5));
+    delayMicroseconds(250 + (i * 2.5));
     digitalWrite(stepPin, LOW);
-    delayMicroseconds(500 + (i * 2.5));
+    delayMicroseconds(250 + (i * 2.5));
   }
   delay(1000);
 }
